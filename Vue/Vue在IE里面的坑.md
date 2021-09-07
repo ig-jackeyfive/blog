@@ -31,3 +31,35 @@ IE不支持promise等es语法。在Vue官网里有提到
 IE的向后端发送的请求url有中文时会乱码。
 
 这时要将Url通过encodeURI（）进行编码成为**统一资源标识符 (URI)**
+
+# 4. select
+
+在IE里, select的option是不支持onclick事件滴
+
+# 5.el-table
+
+/* 解决el-table在ie中不显示 */
+
+.el-table {
+
+-ms-flex: none !important;
+
+flex: none !important;
+
+height: max-content;
+
+}
+
+/* 解决el-table在ie宽度不能100% */
+
+.el-table__header{
+
+  width: 100% !important;
+
+}
+
+.el-table__body{
+
+  width: 100% !important;
+
+}
